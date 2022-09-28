@@ -157,6 +157,10 @@ class CalcButton(QPushButton):
         elif self.text() in "/*":  # Do not leave writing on the display if there is nothing written on it.
             if self.input.text() == "" or self.input.text() is None:
                 return
+        elif self.text() in ".":  # Checks previous entry by clicking the "dot" key and inserts zero where relevant.
+            for check in ['', '+', '-', '/', '*']:
+                if self.input.text() == check or self.input.text()[-1] == check:
+                    return self.input.setText(self.input.text() + "0" + self.text())
         elif self.text() in "=":  # Tries to calculate display content using the built-in eval function
             try:
                 self.input.setPlaceholderText(str(eval(self.input.text())))
