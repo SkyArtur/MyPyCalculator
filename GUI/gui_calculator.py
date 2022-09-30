@@ -1,7 +1,7 @@
 from GUI.objects import *
 
 
-class Caculadora(CalcWidget):
+class MyPyCalculator(CalcWidget):
     """
     Calculator main window.
 

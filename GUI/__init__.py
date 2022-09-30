@@ -1,4 +1,4 @@
-from GUI.gui_calculator import Caculadora
+from GUI.gui_calculator import MyPyCalculator
 from GUI.objects import CalcApplication
 
 
@@ -9,6 +9,6 @@ def app_run() -> None:
     :return: None
     """
     app = CalcApplication()
-    w = Caculadora()
+    w = MyPyCalculator()
     w.show()
     app.exit_app()
