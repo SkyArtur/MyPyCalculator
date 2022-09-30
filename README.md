@@ -55,3 +55,9 @@ Voce poderá usar algum dos comandos abaixo:
 
 Main sobre configuração do arquivo setup.py em:
 https://pypi.org/project/cx-Freeze/
+
+
+## Autor
+
+| [<img src="https://avatars.githubusercontent.com/u/93395366?v=4" width=115><br><sub>Artur dos Santos Shon</sub>](https://github.com/SkyArtur) 
+| :---: |
