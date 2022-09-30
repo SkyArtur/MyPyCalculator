@@ -40,8 +40,8 @@ Voce poderá usar algum dos comandos abaixo:
             <td colspan="2" style="text-align: justify">O projeto inclui um arquivo setup.py para a construção de um executável.</td>
         </tr>
         <tr>
-            <td><code>pip install PySide6</code></td>
-            <td><code>pip3 install PySide6</code></td>
+            <td><code>pip install cx_Freeze</code></td>
+            <td><code>pip3 install cx_Freeze</code></td>
         </tr>
         <tr>
             <th colspan="2" style="text-align: justify">Comando</th>
