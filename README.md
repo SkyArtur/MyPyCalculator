@@ -53,7 +53,7 @@ Voce poderá usar algum dos comandos abaixo:
     </tbody>
 </table>
 
-Main sobre configuração do arquivo setup.py em:
+Mais sobre configuração do arquivo setup.py em:
 https://pypi.org/project/cx-Freeze/
 
 
