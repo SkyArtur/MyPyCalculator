@@ -2,6 +2,10 @@
 
 > status: finalizado
 
+
+https://user-images.githubusercontent.com/93395366/193315465-f7e73721-537c-41f0-aa39-45ff6ed83050.mp4
+
+
 Uma calculadora vintage, construida em PySide6(PyQt6). Neste projeto foram trabalhados princípios de orientação a 
 objetos (herança, atribuição, polimorfismo) para sobrescrever métodos das classes de PySide6. Para testar o projeto será 
 necessário realizar a criação de um ambiente virtual(recomendado). Também será necessária a instalação do pacote PySide6.
