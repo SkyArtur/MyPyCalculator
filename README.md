@@ -2,6 +2,10 @@
 
 > status: finalizado
 
+
+https://user-images.githubusercontent.com/93395366/193315465-f7e73721-537c-41f0-aa39-45ff6ed83050.mp4
+
+
 Uma calculadora vintage, construida em PySide6(PyQt6). Neste projeto foram trabalhados princípios de orientação a 
 objetos (herança, atribuição, polimorfismo) para sobrescrever métodos das classes de PySide6. Para testar o projeto será 
 necessário realizar a criação de um ambiente virtual(recomendado). Também será necessária a instalação do pacote PySide6.
@@ -36,8 +40,8 @@ Voce poderá usar algum dos comandos abaixo:
             <td colspan="2" style="text-align: justify">O projeto inclui um arquivo setup.py para a construção de um executável.</td>
         </tr>
         <tr>
-            <td><code>pip install PySide6</code></td>
-            <td><code>pip3 install PySide6</code></td>
+            <td><code>pip install cx_Freeze</code></td>
+            <td><code>pip3 install cx_Freeze</code></td>
         </tr>
         <tr>
             <th colspan="2" style="text-align: justify">Comando</th>
@@ -51,3 +55,9 @@ Voce poderá usar algum dos comandos abaixo:
 
 Main sobre configuração do arquivo setup.py em:
 https://pypi.org/project/cx-Freeze/
+
+
+## Autor
+
+| [<img src="https://avatars.githubusercontent.com/u/93395366?v=4" width=115><br><sub>Artur dos Santos Shon</sub>](https://github.com/SkyArtur) 
+| :---: |
