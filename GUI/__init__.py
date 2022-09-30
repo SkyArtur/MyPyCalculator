@@ -8,7 +8,7 @@ def app_run() -> None:
 
     :return: None
     """
-    app = CalcApplication()
-    w = MyPyCalculator()
-    w.show()
-    app.exit_app()
+    calc_app = CalcApplication()
+    calc_win = MyPyCalculator()
+    calc_win.show()
+    calc_app.exit_app()
