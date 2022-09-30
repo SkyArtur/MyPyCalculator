@@ -24,10 +24,12 @@ class CalcApplication(QApplication):
 
 
 class CalcIcon(QIcon):  # simple inheritance of the QIcon class
-    def __init__(self, dirs: str, files: str):
+    def __init__(self):
         super().__init__()
-        ICON_PATH = os.path.join(Path(__file__).parent / dirs, files)
-        self.addFile(ICON_PATH, QSize(), self.Normal, self.Off)
+        icon_path = os.path.join(
+            Path(__file__).parent / 'icon', 'calc.ico'
+        )
+        self.addFile(icon_path, QSize(), self.Normal, self.Off)
 
     @property
     def icon(self) -> QIcon:
@@ -40,10 +42,12 @@ class CalcIcon(QIcon):  # simple inheritance of the QIcon class
 
 
 class CalcDisplayFont(QFont):
-    def __init__(self, dirs: str, files: str):
+    def __init__(self):
         super().__init__()
-        FONT_PATH = os.path.join(Path(__file__).parent / dirs, files)
-        QFontDatabase.addApplicationFont(FONT_PATH)
+        font_path = os.path.join(
+            Path(__file__).parent / 'fonts', "Digital7-1e1Z.ttf"
+        )
+        QFontDatabase.addApplicationFont(font_path)
         self.setFamily(u"Digital-7")
         self.setPointSize(55)
 
@@ -68,7 +72,7 @@ class CalcWidget(QWidget):
 
         :return: None
         """
-        self.setWindowIcon(CalcIcon('icon', 'calc.ico').icon)
+        self.setWindowIcon(CalcIcon().icon)
         self.setWindowTitle('Calculadora')
         self.setProperty('class', 'widget')
         self.setFixedSize(345, 375)
@@ -104,7 +108,7 @@ class CalcDisplay(QLineEdit):
 
         :return: None
         """
-        self.setFont(CalcDisplayFont('fonts', "Digital7-1e1Z.ttf").font)
+        self.setFont(CalcDisplayFont().font)
         self.setGeometry(QRect(10, 10, 320, 80))
         self.setAlignment(Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
         self.setEnabled(False)
