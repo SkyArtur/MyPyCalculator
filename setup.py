@@ -19,10 +19,10 @@ if sys.platform == "win32":
     base = "Win32GUI"
 
 setup(
-    name="Cadastro de Clientes PySide-Json",
-    version="3.3",
+    name="MyPyCalculator",
+    version="1.0",
     author="SkyArtur",
-    description="My GUI application!",
+    description="Vintage Calculator!",
     options={"build_exe": build_exe_options},
     executables=[Executable("main.py", icon=icon_path, base=base)],
 )
