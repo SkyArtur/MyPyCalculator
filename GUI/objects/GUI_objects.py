@@ -100,7 +100,16 @@ class CalcKeyboard(QWidget):
 class CalcDisplay(QLineEdit):
     def __init__(self, parent):
         super().__init__(parent)
+        self._result = None
         self.__config()
+
+    @property
+    def result(self):
+        try:
+            self._result = round(eval(self.text()), 7)
+        except SyntaxError:
+            return False
+        return str(self._result)
 
     def __config(self) -> None:
         """
@@ -158,17 +167,21 @@ class CalcButton(QPushButton):
         elif self.text() in "Del":  # Clear display's text and placeholder text
             self.input.clear()
             return self.input.setPlaceholderText('')
-        elif self.text() in "/*":  # Do not leave writing on the display if there is nothing written on it.
-            if self.input.text() == "" or self.input.text() is None:
-                return
+        elif self.text() in "/*-+":  # Do not leave writing on the display if there is nothing written on it.
+            if not self.input.result:
+                if self.text() not in '-+':  # except if the buttons are + and -
+                    return
+            else:
+                if self.input.result not in '/*':
+                    self.input.setText(self.input.result)
         elif self.text() in ".":  # Checks previous entry by clicking the "dot" key and inserts zero where relevant.
             for check in ['', '+', '-', '/', '*']:
                 if self.input.text() == check or self.input.text()[-1] == check:
                     return self.input.setText(self.input.text() + "0" + self.text())
         elif self.text() in "=":  # Tries to calculate display content using the built-in eval function
             try:
-                self.input.setPlaceholderText(str(eval(self.input.text())))
+                self.input.setPlaceholderText(self.input.result)
                 return self.input.clear()
-            except Exception as error:
-                return error
+            except TypeError:
+                return
         return self.input.setText(self.input.text() + self.text())
