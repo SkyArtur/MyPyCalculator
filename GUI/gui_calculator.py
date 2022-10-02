@@ -25,5 +25,4 @@ class MyPyCalculator(CalcWidget):
             self.keyboard.grid.addWidget(CalcButton(self.keyboard, f'{btn[2][pos]}'), 3, pos, 1, 1)
         self.keyboard.grid.addWidget(CalcButton(self.keyboard, '.'), 4, 0, 1, 1)
         self.keyboard.grid.addWidget(CalcButton(self.keyboard, '0'), 4, 1, 1, 1)
-        self.keyboard.grid.addWidget(CalcButton(self.keyboard, '-/+'), 4, 2, 1, 1)
-        self.keyboard.grid.addWidget(CalcButton(self.keyboard, '='), 4, 3, 1, 2)
+        self.keyboard.grid.addWidget(CalcButton(self.keyboard, '='), 4, 3, 1, 3)
