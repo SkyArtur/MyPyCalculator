@@ -24,5 +24,5 @@ setup(
     author="SkyArtur",
     description="Vintage Calculator!",
     options={"build_exe": build_exe_options},
-    executables=[Executable("main.py", icon=icon_path, base=base)],
+    executables=[Executable("MyPyCalculator.py", icon=icon_path, base=base)],
 )

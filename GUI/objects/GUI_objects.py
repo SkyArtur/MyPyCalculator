@@ -49,7 +49,7 @@ class CalcDisplayFont(QFont):
         )
         QFontDatabase.addApplicationFont(font_path)
         self.setFamily(u"Digital-7")
-        self.setPointSize(55)
+        self.setPointSize(45)
 
     @property
     def font(self) -> QFont:
