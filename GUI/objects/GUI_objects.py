@@ -86,7 +86,7 @@ class CalcKeyboard(QWidget):
         self.grid = QGridLayout(self)
         self.config()
 
-    def config(self) -> None:
+    def __config(self) -> None:
         """
         Grid settings.
 
