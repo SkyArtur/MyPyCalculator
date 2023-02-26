@@ -1,4 +1,6 @@
-from GUI.objects import *
+from GUI.objects import (
+    CalcWidget, CalcDisplay, CalcKeyboard, CalcButton
+)
 
 
 class MyPyCalculator(CalcWidget):
